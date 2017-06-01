@@ -11,13 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class RegistActivity extends AppCompatActivity {
+public class RegistAccount extends AppCompatActivity {
 
-    private EditText etEmail;
-    private EditText etPassword;
-    private EditText etPasswordConfirm;
-    private Button btnDone;
-    private Button btnCancel;
+  EditText etEmail,etPassword;
+    EditText etPasswordConfirm;
+
+    private Button btnCancel, btnDone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,28 +62,28 @@ public class RegistActivity extends AppCompatActivity {
 
                 // 이메일 입력 확인
                 if( etEmail.getText().toString().length() == 0 ) {
-                    Toast.makeText(RegistActivity.this, "Email을 입력하세요!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistAccount.this, "Email을 입력하세요!", Toast.LENGTH_SHORT).show();
                     etEmail.requestFocus();
                     return;
                 }
 
                 // 비밀번호 입력 확인
                 if( etPassword.getText().toString().length() == 0 ) {
-                    Toast.makeText(RegistActivity.this, "비밀번호를 입력하세요!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistAccount.this, "비밀번호를 입력하세요!", Toast.LENGTH_SHORT).show();
                     etPassword.requestFocus();
                     return;
                 }
 
                 // 비밀번호 확인 입력 확인
                 if( etPasswordConfirm.getText().toString().length() == 0 ) {
-                    Toast.makeText(RegistActivity.this, "비밀번호 확인을 입력하세요!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistAccount.this, "비밀번호 확인을 입력하세요!", Toast.LENGTH_SHORT).show();
                     etPasswordConfirm.requestFocus();
                     return;
                 }
 
                 // 비밀번호 일치 확인
                 if( !etPassword.getText().toString().equals(etPasswordConfirm.getText().toString()) ) {
-                    Toast.makeText(RegistActivity.this, "비밀번호가 일치하지 않습니다!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegistAccount.this, "비밀번호가 일치하지 않습니다!", Toast.LENGTH_SHORT).show();
                     etPassword.setText("");
                     etPasswordConfirm.setText("");
                     etPassword.requestFocus();

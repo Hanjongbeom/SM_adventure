@@ -9,13 +9,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
-import static android.R.attr.data;
-
 public class MainActivity extends AppCompatActivity {
 
     private EditText etEmail;
+    EditText etPassword, etPasswordConfirm;
+
+    String sEm, sPw, sPw_chk;
+
     private Button btnRegist;
+    Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(new Intent(this, SplashActivity.class));
         etEmail = (EditText) findViewById(R.id.etEmail);
+        etPassword = (EditText) findViewById(R.id.etPassword);
+        etPasswordConfirm = (EditText) findViewById(R.id.etPasswordConfirm);
         btnRegist = (Button) findViewById(R.id.btnRegist);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
         btnRegist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RegistActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RegistAccount.class);
 
                 // SINGLE_TOP : 이미 만들어진게 있으면 그걸 쓰고, 없으면 만들어서 써라
                 intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
@@ -56,5 +61,23 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "회원가입을 완료했습니다!", Toast.LENGTH_SHORT).show();
             etEmail.setText(data.getStringExtra("email"));
         }
+    }
+
+    public void btnLogin(View view) {
+    /* 버튼을 눌렀을 때 동작하는 소스 */
+        sEm = etEmail.getText().toString();
+        sPw = etPassword.getText().toString();
+        sPw_chk = etPasswordConfirm.getText().toString();
+
+        if (sPw.equals(sPw_chk)) {
+        /* 패스워드 확인이 정상적으로 됨 */
+            RegistDB rdb = new RegistDB();
+            rdb.execute();
+            startActivity(new Intent(this, EventActivity.class));
+            finish();
+        } else {
+        /* 패스워드 확인이 불일치 함 */
+        }
+
     }
 }

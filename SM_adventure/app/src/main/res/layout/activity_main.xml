@@ -47,6 +47,8 @@
         android:layout_height="wrap_content"
         android:text="로그인"
         android:id="@+id/btnLogin"
+        android:clickable="true"
+        android:onClick="btnLogin"
         android:layout_alignBottom="@+id/btnRegist"
         android:layout_toRightOf="@+id/btnRegist"
         android:layout_toEndOf="@+id/btnRegist" />
