@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 task.execute(Nickname, ID, Password);
 
 
-                mEditTextNickname.setText("");
-                mEditTextID.setText("");
+           //     mEditTextNickname.setText("");
+           //     mEditTextID.setText("");
                 mEditTextPassword.setText("");
 
 
@@ -86,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
             //    mEditTextNickname.setText("");
             //    mEditTextID.setText("");
                 mEditTextPassword.setText("");
+
+
 
 
             }
@@ -198,6 +200,7 @@ public class MainActivity extends AppCompatActivity {
 
             progressDialog = ProgressDialog.show(MainActivity.this,
                     "Please Wait", null, true, true);
+
         }
 
 
@@ -252,6 +255,9 @@ public class MainActivity extends AppCompatActivity {
                 InputStream inputStream;
                 if(responseStatusCode == HttpURLConnection.HTTP_OK) {
                     inputStream = httpURLConnection.getInputStream();
+
+                    startActivity(new Intent(MainActivity.this, EventActivity.class));
+                    finish();
                 }
                 else{
                     inputStream = httpURLConnection.getErrorStream();

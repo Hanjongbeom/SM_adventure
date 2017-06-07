@@ -7,11 +7,13 @@
     tools:context="com.example.dayto.sm_adventure.EventActivity">
 
 
+
+
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="로그인 성공시 이 화면이 보여집니다."
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="275dp" />
 </android.support.constraint.ConstraintLayout>
