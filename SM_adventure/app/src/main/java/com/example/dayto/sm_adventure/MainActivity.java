@@ -21,6 +21,8 @@ import java.net.URL;
 
 
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     private static String TAG = "phptest_MainActivity";
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTextViewResult;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,19 +41,13 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(new Intent(this,SplashActivity.class));
 
-
-
         mEditTextNickname = (EditText)findViewById(R.id.editText_main_Nickname);
         mEditTextID = (EditText)findViewById(R.id.editText_main_ID);
         mEditTextPassword = (EditText)findViewById(R.id.editText_main_Password);
         mTextViewResult = (TextView)findViewById(R.id.textView_main_result);
 
-        //회원가입 버튼
         Button buttonInsert = (Button)findViewById(R.id.button_main_insert);
-
-        //로그인버튼
         Button buttonLogin = (Button)findViewById(R.id.button_main_login);
-
         buttonInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,14 +60,12 @@ public class MainActivity extends AppCompatActivity {
                 task.execute(Nickname, ID, Password);
 
 
-           //     mEditTextNickname.setText("");
-           //     mEditTextID.setText("");
+              //  mEditTextNickname.setText("");
+              //  mEditTextID.setText("");
                 mEditTextPassword.setText("");
-
 
             }
         });
-
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,12 +78,9 @@ public class MainActivity extends AppCompatActivity {
                 task.execute(Nickname, ID, Password);
 
 
-            //    mEditTextNickname.setText("");
-            //    mEditTextID.setText("");
+              //  mEditTextNickname.setText("");
+              //  mEditTextID.setText("");
                 mEditTextPassword.setText("");
-
-
-
 
             }
         });
@@ -121,6 +113,14 @@ public class MainActivity extends AppCompatActivity {
             }
             mTextViewResult.setText(f_text);
             Log.d(TAG, "POST response  - " + result);
+
+            if ("로그인 성공"==f_text){
+                startActivity(new Intent(MainActivity.this, EventActivity.class));
+
+                finish();}
+            else {
+
+            }
         }
 
 
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
             String Nickname = (String)params[0];
             String ID = (String)params[1];
             String Password = (String)params[2];
-            String serverURL = "http://www.sunm.esy.es/input.php";
+            String serverURL = "http://smadventure.esy.es/push.php";
             String postParameters = "Nickname=" + Nickname + "&ID=" + ID + "&Password=" + Password + "&signUp=";
 
             try {
@@ -200,7 +200,6 @@ public class MainActivity extends AppCompatActivity {
 
             progressDialog = ProgressDialog.show(MainActivity.this,
                     "Please Wait", null, true, true);
-
         }
 
 
@@ -227,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
             String Nickname = (String)params[0];
             String ID = (String)params[1];
             String Password = (String)params[2];
-            String serverURL = "http://www.sunm.esy.es/input.php";
+            String serverURL = "http://smadventure.esy.es/push.php";
             String postParameters = "Nickname=" + Nickname + "&ID=" + ID + "&Password=" + Password + "&login=";
 
             try {
@@ -255,9 +254,6 @@ public class MainActivity extends AppCompatActivity {
                 InputStream inputStream;
                 if(responseStatusCode == HttpURLConnection.HTTP_OK) {
                     inputStream = httpURLConnection.getInputStream();
-
-                    startActivity(new Intent(MainActivity.this, EventActivity.class));
-                    finish();
                 }
                 else{
                     inputStream = httpURLConnection.getErrorStream();
@@ -291,4 +287,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
 
