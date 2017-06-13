@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image_store">
+
+
+    <Button
+        android:id="@+id/returnBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginTop="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/item_CS"
+        android:layout_toStartOf="@+id/item_CS" />
+
+    <ImageView
+        android:id="@+id/item_Bb"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignLeft="@+id/item_CS"
+        android:layout_alignStart="@+id/item_CS"
+        android:layout_below="@+id/item_CS"
+        app:srcCompat="@drawable/item_bb"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="28dp" />
+
+    <ImageView
+        android:id="@+id/item_CS"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/returnBt"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/item_cs"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="254dp" />
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="@drawable/bg_image_main">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/basic"
+        android:id="@+id/Image_char"
+        android:layout_marginBottom="55dp"
+        android:layout_above="@+id/moneyText"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/goShopButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="13dp"
+        app:srcCompat="@drawable/shop" />
+
+    <ImageView
+        android:id="@+id/goPocketDexButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="13dp"
+        app:srcCompat="@drawable/pocket" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loveText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/moneyText"
+        android:layout_alignStart="@+id/moneyText"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="28dp"
+        android:id="@+id/moneyText"
+        android:layout_above="@+id/loveText"
+        android:layout_toLeftOf="@+id/Image_char"
+        android:layout_toStartOf="@+id/Image_char" />
+
+    <TextView
+        android:id="@+id/pocket_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/moneyText"
+        android:text="소지금"
+        android:textSize="10pt"
+        />
+
+    <TextView
+        android:id="@+id/friendship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/moneyText"
+        android:text="친밀도"
+        android:textSize="10pt"
+        />
+</RelativeLayout>

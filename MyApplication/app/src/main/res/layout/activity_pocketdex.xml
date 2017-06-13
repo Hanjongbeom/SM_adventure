@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:label="포켓몬 도감"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dock"
+
+    tools:context="com.example.chojaeyoung.myapplication.PocketDexActivity">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+
+        android:src="@drawable/g1_j_d"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:visibility="visible"
+        android:layout_above="@+id/imageView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+
+        android:src="@drawable/g2_e_d"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="132dp"
+        android:visibility= "visible"
+        android:layout_above="@+id/imageView5"
+        android:layout_alignLeft="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+
+        android:src="@drawable/g3_m_d"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="248dp"
+        android:visibility = "visible"
+        android:layout_above="@+id/imageView6"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/p1_m_d"
+        tools:layout_editor_absoluteY="136dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:visibility = "visible"
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/p2_t_d"
+        tools:layout_editor_absoluteY="136dp"
+        tools:layout_editor_absoluteX="132dp"
+        android:visibility = "visible"
+        android:layout_alignTop="@+id/imageView6"
+        android:layout_alignLeft="@+id/imageView8"
+        android:layout_alignStart="@+id/imageView8" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/p3_p_d"
+        tools:layout_editor_absoluteY="136dp"
+        tools:layout_editor_absoluteX="248dp"
+        android:visibility = "visible"
+        android:layout_above="@+id/imageView9"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="11dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/r1_n_d"
+        tools:layout_editor_absoluteY="256dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:visibility = "visible"
+        android:layout_above="@+id/imageView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/r2_c_d"
+        tools:layout_editor_absoluteY="256dp"
+        tools:layout_editor_absoluteX="132dp"
+        android:visibility = "visible"
+        android:layout_above="@+id/imageView11"
+        android:layout_alignLeft="@+id/imageView11"
+        android:layout_alignStart="@+id/imageView11" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/r3_l_d"
+        tools:layout_editor_absoluteY="256dp"
+        tools:layout_editor_absoluteX="248dp"
+        android:visibility = "visible"
+        android:layout_above="@+id/imageView12"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/y1_p_d"
+        tools:layout_editor_absoluteY="375dp"
+        tools:layout_editor_absoluteX="16dp"
+        android:visibility = "visible"
+        android:layout_alignTop="@+id/imageView11"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/y2_t_d"
+        tools:layout_editor_absoluteY="375dp"
+        tools:layout_editor_absoluteX="132dp"
+        android:visibility = "visible"
+        android:layout_alignTop="@+id/imageView12"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/y3_k_d"
+        tools:layout_editor_absoluteY="375dp"
+        tools:layout_editor_absoluteX="248dp"
+        android:visibility = "visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="21dp" />
+
+
+</RelativeLayout>

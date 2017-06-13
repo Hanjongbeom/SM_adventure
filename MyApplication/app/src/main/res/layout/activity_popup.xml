@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image_get"
+    android:layout_centerInParent="true"
+    android:id="@+id/layout_popup">
+
+    <TextView
+        android:id="@+id/sellText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  "
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="280dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="69dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="89dp" />
+
+    <Button
+        android:id="@+id/sellBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#928AD1"
+        android:text="SELL"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="60dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
